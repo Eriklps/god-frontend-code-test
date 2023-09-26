@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import { Block, Button } from 'vcc-ui';
+import React from "react";
+import { Text } from "vcc-ui";
 import { useCars } from "../hooks/useCars";
+import { CarCard } from "./CarCard";
+
+import styles from '../../public/css/home.module.css'
+import { Spacer } from "./Spacer";
 
 export const HelloWorld: React.FC = () => {
   const { cars } = useCars();
 
-  console.log(cars);
-
   return (
-    <Block extend={{ padding: 20 }}>
-      <Button>Click me!</Button>
-    </Block>
+    <div className={styles.homeWrapper}>
+      <Text variant="cook">All Recharge models</Text>
+      <Spacer></Spacer>
+      <div className={styles.cardsWrapper}>
+        {cars.map(car => <CarCard key={car.id} car={car}/>)}
+      </div>
+    </div>
   );
 };
