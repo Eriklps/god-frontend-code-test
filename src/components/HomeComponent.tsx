@@ -36,7 +36,7 @@ export const HomeComponent: React.FC = () => {
 
   return (
     <div className={styles.homeWrapper}>
-      <Text variant="cook">Todos os modelos Recharge</Text>
+      <Text variant="cook">All Recharge models</Text>
       <Spacer></Spacer>
       <div className={styles.cardsWrapper} id="card-list">
         {cars.map(car => <CarCard key={car.id} car={car}/>)}

@@ -14,8 +14,8 @@ export function CarCard({ car } : CardProps){
             <Text variant="bates" subStyle="emphasis">{car?.bodyType}</Text>
             <Flex extend={{
                 justifyContent: 'flex-start',
-                alignItems: 'center',
-                flexDirection: 'row',
+                alignItems: 'left',
+                flexDirection: 'column',
                 margin: 0
             }}>
                 <Text variant="amundsen" extend={{ margin: 0, padding: 0 }}>{car?.modelName}</Text>
